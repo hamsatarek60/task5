@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        <button onclick="updaterCalculation('1');">1</button>
+        
+        <button onclick="updaterCalculation('2');">2</button>
+        
+        <button onclick="updaterCalculation('3');">3</button>
+
+        <button onclick="updaterCalculation('+');">+</button>
+    </div>
+    <br>
+    <div>
+        <button onclick="updaterCalculation('4') ;">4</button>
+        
+        <button onclick="updaterCalculation('5') ;">5</button>
+        
+        <button onclick="updaterCalculation('6') ;">6</button>        
+
+        <button onclick="updaterCalculation('-') ;">-</button>
+    </div>
+    <br>
+
+    <div>
+        <button onclick="updaterCalculation('7') ;">7</button>
+        
+        <button onclick="updaterCalculation('8') ;">8</button>
+        
+        <button onclick="updaterCalculation('9') ;">9</button>
+
+        <button onclick="updaterCalculation('*') ;">*</button>
+    </div>
+    <br>
+    <div>
+        <button onclick="updaterCalculation('0') ;">0</button>
+        <button onclick="updaterCalculation('.') ;">.</button>
+        <button onclick="updaterCalculation('/') ;">/</button>
+        
+
+        <button onclick=
+        "calculation= eval(calculation);
+        console.log(calculation) ;
+        localStorage.setItem('calculation', calculation);">=</button>
+    
+</div>
+    <br>
+    <div>
+        <button onclick="calculation = '';
+        console.log('cleared') ;
+        localStorage.setItem('calculation', calculation);">Clear</button>
+    
+    
+    
+    <script>
+        let calculation = localStorage.getItem('calculation') || " ";
+    
+        function updaterCalculation(value) {
+            calculation += value;
+            console.log(calculation);
+            localStorage.setItem('calculation', calculation);
+        }
+    </script>
+</body>
+</html>
